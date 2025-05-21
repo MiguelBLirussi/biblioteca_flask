@@ -1,4 +1,4 @@
-# 📚 Sistema de Biblioteca - Versão com SQLite
+# 📚 Sistema de Biblioteca - Versão Flask
 
 Este projeto é um sistema de gerenciamento de biblioteca simples que permite adicionar, listar, buscar e editar livros. Diferente da versão anterior, agora os dados são armazenados em um banco de dados **SQLite**, garantindo maior persistência e estruturação dos dados, além disso agora o foco do projeto muda para integração com o framework **Flask**, para criação de uma interface, onde o usuário vai realizar a interação.
 
@@ -30,15 +30,15 @@ Este projeto é um sistema de gerenciamento de biblioteca simples que permite ad
 ## 🗂 Estrutura do Projeto
 
 # biblioteca_flask/
-# └── README.md # Este arquivo
+# └── README.md 
 # ├── app.py - Menu principal e interação com o usuário, arquivo que roda o Flask
 # ├── livro.py - Classe Livro e suas funcionalidades  
 # ├── db.py - Funções para manipulação do banco de dados SQLite
 # ├── biblioteca.db - Arquivo do banco de dados (criado automaticamente)
 # ├── templates/
-# |   └── index.html - Página inicial (listar livros, formulário, etc.)
+#     └── index.html - Página inicial (listar livros, formulário, etc.)
 # ├── static/
-# |   └── style.css - CSS para estilizar as páginas
+#     └── style.css - CSS para estilizar as páginas
 
 ---
 
