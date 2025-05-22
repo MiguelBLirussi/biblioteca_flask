@@ -58,7 +58,13 @@ python app.py
 
 ## 💡 Próximas melhorias
 
-Testes automatizados com unittest
+🔐 Login de usuários (admin e leitores)
+
+📚 Prazos com alertas para devolução
+
+🌐 Deploy online com Render, Vercel ou PythonAnywhere
+
+📊 Dashboard com gráficos (livros mais emprestados, histórico por período, etc.)
 
 ---
 

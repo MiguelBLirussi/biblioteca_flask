@@ -72,5 +72,19 @@ def detalhes(id):
         return "Livro não encontrado", 404
     return render_template('detalhes.html', livro=livro)
 
+@app.route('/historico')
+def ver_historico():
+    conn = criar_conexao()
+    cursor = conn.cursor()
+    cursor.execute('''
+        SELECT h.id, l.titulo, h.data, h.acao
+        FROM historico h
+        JOIN livros l ON h.livro_id = l.id
+        ORDER BY h.data DESC
+    ''')
+    historico = cursor.fetchall()
+    conn.close()
+    return render_template('historico.html', historico=historico)
+
 if __name__ == '__main__':
     app.run(debug=True)

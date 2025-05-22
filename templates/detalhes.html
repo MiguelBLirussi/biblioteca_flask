@@ -6,7 +6,7 @@
     <li><strong>Título:</strong> {{ livro[1] }}</li>
     <li><strong>Autor:</strong> {{ livro[2] }}</li>
     <li><strong>Ano:</strong> {{ livro[3] }}</li>
-    <li><strong>Disponível:</strong> {{ 'Sim' if livro[4] else 'Não' }}</li>
+    <li><strong>Disponível:</strong> {{ '✅' if livro[4] else '❌' }}</li>
 </ul>
 <a class="button-link" href="{{ url_for('index') }}">Voltar</a>
 {% endblock %}

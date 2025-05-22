@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Histórico de Ações</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Título do Livro</th>
+        <th>Data</th>
+        <th>Ação</th>
+    </tr>
+    {% for entrada in historico %}
+    <tr>
+        <td>{{ entrada[0] }}</td>
+        <td>{{ entrada[1] }}</td>
+        <td>{{ entrada[2] }}</td>
+        <td>{{ entrada[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
