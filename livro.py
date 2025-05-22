@@ -10,7 +10,7 @@ class Livro:
         self.historico = []
 
     def __str__(self):
-        status = '✅' if self.disponivel else '❌'
+        status = '☑️' if self.disponivel else '❌'
         return f'ID:{self.id} | Título:{self.titulo} | Autor:{self.autor} | Ano:{self.ano} | Disponível:{status}'
 
     def exibir_historico(self, conn):

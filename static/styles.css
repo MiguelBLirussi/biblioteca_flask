@@ -7,7 +7,7 @@ body {
     color: #ffffff;
 }
 header {
-    background-color: #1DB954;
+    background-image: linear-gradient(to right,#020024,#1717ac,#00D4FF);
     padding: 20px;
     text-align: center;
 }
@@ -18,7 +18,7 @@ header h1 {
 }
 
 .titulo{
-    color: #121212;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
     margin: 0px 10px;
@@ -31,7 +31,7 @@ header h1 {
     text-decoration: none;
     /* padding: 10px 20px; */
     font-weight: bold;
-    font-size: 50px;
+    font-size: 38px;
     text-align: center;
     margin: 0 20px 20px;
 }
@@ -80,8 +80,8 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #1DB954;
-    color: #000;
+    background-color: #1717ac;
+    color: #ffffff;
 }
 tr:nth-child(even) {
     background-color: #2a2a2a;
@@ -104,35 +104,36 @@ form input, form select {
 }
 form button {
     padding: 10px;
-    background-color: #1DB954;
+    background-color: #1717ac;
     border: none;
-    color: #000;
-    font-weight: bold;
+    color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
 }
 form button:hover {
-    background-color: #17a74a;
+    background-color: #2d57b1;
 }
 a.button-link {
     display: inline-block;
     margin: 5px 10px 5px 0;
     padding: 8px 16px;
-    background-color: #1DB954;
-    color: #000;
+    background-color: #1717ac;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 a.button-link:hover {
-    background-color: #17a74a;
+    background-color: #2d57b1;
 }
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1DB954;
-    color: #000;
+    background-image: linear-gradient(to right,#020024,#1717ac,#1717ac);
+    color: #ffffff;
     margin-top: 50px;
     border-top: 1px solid #333;
 }
@@ -147,20 +148,24 @@ footer {
     border-radius: 5px;
     /* width: 100%; */
     background-color: #2a2a2a;
-    color:#20d45f;
+    color:#2d57b1;
     font-weight: bold;
     font-size: 20px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .search-form button {
     padding: 8px 12px;
-    background-color: #1db954;
-    color: white;
+    background-color: #1717ac;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .search-form button:hover {
-    background-color: #17a44d;
+    background-color: #2d57b1;
 }

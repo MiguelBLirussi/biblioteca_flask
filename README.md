@@ -6,7 +6,7 @@ Este projeto é um sistema de gerenciamento de biblioteca simples que permite ad
 
 ## 🚀 Funcionalidades
 
-- ✅ Cadastro de livros  
+- ☑️ Cadastro de livros  
 - 📖 Listagem de todos os livros  
 - 🔍 Busca por título ou autor  
 - 🔁 Empréstimo e devolução de livros  

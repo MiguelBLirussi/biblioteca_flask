@@ -4,7 +4,7 @@
 <form action="{{ url_for('index') }}" method="get" class="search-form">
     <input type="text" name="titulo" placeholder="Buscar por título..." value="{{ request.args.get('titulo', '') }}">
     <input type="text" name="autor" placeholder="Buscar por autor..." value="{{ request.args.get('autor', '') }}">
-    <button type="submit">Buscar</button>
+    <button type="submit">Buscar Livro</button>
 </form>
 </form>
 <table>
@@ -22,7 +22,7 @@
         <td>{{ livro[1] }}</td>
         <td>{{ livro[2] }}</td>
         <td>{{ livro[3] }}</td>
-        <td class="disponivel">{{ '✅' if livro[4] else '❌' }}</td>
+        <td class="disponivel">{{ '☑️' if livro[4] else '❌' }}</td>
         <td>
             <a class="button-link" href="{{ url_for('detalhes', id=livro[0]) }}">Detalhes</a>
             <a class="button-link" href="{{ url_for('editar', id=livro[0]) }}">Editar</a>
