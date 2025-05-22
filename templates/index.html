@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block conteudo %}
-<h2>Lista de Livros</h2>
+<h2 class="titulo_2">Lista de Livros</h2>
+<form action="{{ url_for('index') }}" method="get" class="search-form">
+    <input type="text" name="titulo" placeholder="Buscar por título..." value="{{ request.args.get('titulo', '') }}">
+    <input type="text" name="autor" placeholder="Buscar por autor..." value="{{ request.args.get('autor', '') }}">
+    <button type="submit">Buscar</button>
+</form>
+</form>
 <table>
     <tr>
         <th>ID</th>

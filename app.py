@@ -17,9 +17,36 @@ app = Flask(__name__)
 # Cria as tabelas no banco
 criar_tabela()
 
+# @app.route('/')
+# def index():
+#     livros = listar_livros()
+#     return render_template('index.html', livros=livros)
+
 @app.route('/')
 def index():
-    livros = listar_livros()
+    titulo_busca = request.args.get('titulo', '').lower()
+    autor_busca = request.args.get('autor', '').lower()
+
+    conn = criar_conexao()
+    cursor = conn.cursor()
+
+    if titulo_busca or autor_busca:
+        query = "SELECT * FROM livros WHERE 1=1"
+        params = []
+
+        if titulo_busca:
+            query += " AND LOWER(titulo) LIKE ?"
+            params.append(f"%{titulo_busca}%")
+        if autor_busca:
+            query += " AND LOWER(autor) LIKE ?"
+            params.append(f"%{autor_busca}%")
+
+        cursor.execute(query, params)
+    else:
+        cursor.execute("SELECT * FROM livros")
+
+    livros = cursor.fetchall()
+    conn.close()
     return render_template('index.html', livros=livros)
 
 @app.route('/adicionar', methods=['GET', 'POST'])
