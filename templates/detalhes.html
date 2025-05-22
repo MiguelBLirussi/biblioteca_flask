@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Detalhes do Livro</h2>
+<ul>
+    <li><strong>ID:</strong> {{ livro[0] }}</li>
+    <li><strong>Título:</strong> {{ livro[1] }}</li>
+    <li><strong>Autor:</strong> {{ livro[2] }}</li>
+    <li><strong>Ano:</strong> {{ livro[3] }}</li>
+    <li><strong>Disponível:</strong> {{ 'Sim' if livro[4] else 'Não' }}</li>
+</ul>
+<a class="button-link" href="{{ url_for('index') }}">Voltar</a>
+{% endblock %}

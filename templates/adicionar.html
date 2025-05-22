@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Adicionar Livro</h2>
+<form action="{{ url_for('adicionar') }}" method="post">
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo" required>
+
+    <label for="autor">Autor:</label>
+    <input type="text" name="autor" required>
+
+    <label for="ano">Ano:</label>
+    <input type="number" name="ano" required>
+
+    <button type="submit">Adicionar</button>
+</form>
+{% endblock %}

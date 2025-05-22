@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}" class="titulo">Biblioteca Virtual</a>
+        <nav>
+            <a href="{{ url_for('adicionar') }}">Adicionar Livro</a>
+        </nav>
+    </header>
+    <main>
+        {% block conteudo %}{% endblock %}
+    </main>
+    <footer>
+        <p>Desenvolvido por Miguel Barreto da Costa © 2025</p>
+    </footer>
+</body>
+</html>

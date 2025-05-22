@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Lista de Livros</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Ano</th>
+        <th>Disponível</th>
+        <th>Ações</th>
+    </tr>
+    {% for livro in livros %}
+    <tr>
+        <td>{{ livro[0] }}</td>
+        <td>{{ livro[1] }}</td>
+        <td>{{ livro[2] }}</td>
+        <td>{{ livro[3] }}</td>
+        <td>{{ 'Sim' if livro[4] else 'Não' }}</td>
+        <td>
+            <a class="button-link" href="{{ url_for('detalhes', id=livro[0]) }}">Detalhes</a>
+            <a class="button-link" href="{{ url_for('editar', id=livro[0]) }}">Editar</a>
+            {% if livro[4] %}
+            <a class="button-link" href="{{ url_for('emprestar_livro', id=livro[0]) }}">Emprestar</a>
+            {% else %}
+            <a class="button-link" href="{{ url_for('devolver_livro', id=livro[0]) }}">Devolver</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
